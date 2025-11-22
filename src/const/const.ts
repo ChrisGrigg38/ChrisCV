@@ -1,0 +1,215 @@
+import { Experience, PersonalInfo, SideProject, Skill } from "@/types/types";
+import moment from "moment";
+
+export const personalInfo: PersonalInfo = {
+    name: "Chris Grigg",
+    title: "Senior/Lead Full Stack Software Engineer",
+    email: "crgrigg22@hotmail.com",
+    phone: "(Intentionally left blank in public repo)",
+    address: "Melbourne, Australia",
+    linkedin: "https://www.linkedin.com/in/chris-grigg-b14b3917/",
+    github: "https://www.github.com/ChrisGrigg38",
+    youtube: "https://www.youtube.com/@christechlead/videos",
+    photoUrl: "/me.png",
+    summary: "A self-motivated and hard working Senior / Lead Developer (21 years total experience) with a wide range of IT experience who is passionate about delivering high quality applications. I started coding at the age of 12 as a hobby and loved it so much that it became my career. <br /><br />I've moved from Backend to Full stack to more recently Front end development. Commercially wise, I'm experienced in react.js, node.js, java, .NET, however personally wise I also have python, c++, c. <br /><br />I also have personal projects (everything from neural networks to unity games) that I maintain regularly on Github at: <br /><br />https://github.com/ChrisGrigg38/<br />https://www.youtube.com/@christechlead/videos<br /><br />If you'd like to see my portfolio.\nPlease see bottom of CV for the personal projects section as well as recent employer performance recognition.\n\nIn fact, this CV itself was created from a react tailwind webapp exported to a PDF that I built myself which is part of my personal projects."
+};
+
+export const skills: Skill[] = [
+    { name: "React.JS", level: 5 },
+    { name: "Node.js", level: 4 },
+    { name: "Jest", level: 5 },
+    { name: "Material UI", level: 4 },
+    { name: "Fluent UI", level: 4 },
+    { name: "Bootstrap", level: 4 },
+    { name: "Playwright", level: 4 },
+    { name: "Selenium", level: 5 },
+    { name: "CSS3", level: 5 },
+    { name: "Yarn", level: 5 },
+    { name: "Webpack", level: 5 },
+    { name: "Angular", level: 3 },
+    { name: "GraphQL", level: 4 },
+    { name: "React Toolkit", level: 3 },
+    { name: "Java", level: 5 },
+    { name: "C#", level: 5 },
+    { name: "Oracle", level: 5 },
+    { name: "MySQL", level: 4 },
+    { name: "Microsoft SQL", level: 5 },
+    { name: "Postgres", level: 3 }
+];
+
+export const experiences: Experience[] = [
+    {
+        company: "Avocado Consulting / HESTA (Initial 3 month contract with multiple extensions)",
+        role: "Senior Front End Engineer",
+        location: "Melbourne, Australia / Hybrid",
+        startDate: moment("1-August-2024"),
+        endDate: null,
+        description: "I've worked on a project that was seen by 1 in 26 Australians for a major superannuation fund. We built a new version of the members portal online using react, graphql, playwright for testing, fluent UI. Some of my achievements in this role were: <br /><br /><ul style=\"list-style-type:disc;\"><li>I reduced the playwright test times down from 25 minutes to 7 minutes which greatly improved our CI/CD pipeline build times. This was done by intelligently arranging the tests to test more things together than to keep repeating the same flow of pages over and over to test one extra thing each test.</li><br /><li>I suggested that the SIT deployment could be automated since we were manually having to fire this off and having a random developer a day give up some of his time to manually fire off a task that could simply be automated. A bitbucket pipelines task was created to automate this.</li><br /><li>I was tasked to make the site pixel perfect with the UX designer after the site was complete but before final release as the site needed some adjustments into the UI.</li><br /><li>I added automation to auto run the unit tests on pipeline build (when raising a PR) on another old legacy project since this was not being done.</li></ul>",
+        minCardSize: 600,
+    },
+    {
+        company: "OfficeHQ",
+        role: "Senior Front End Engineer",
+        location: "Melbourne, Australia / Remote",
+        startDate: moment("1-March-2023"),
+        endDate: moment("1-October-2023"),
+        description: "Added extra functionality to a virtual call centre application. The application was written in react.js, typescript",
+        minCardSize: 290,
+    },
+    {
+        company: "Versent / Woodside - (Initial 6 month Contract with multiple extensions)",
+        role: "Senior Front End Developer",
+        location: "Melbourne, Australia / Remote",
+        startDate: moment("1-January-2021"),
+        endDate: moment("1-December-2022"),
+        description: "Front end development using React.JS, Node.JS, Jest, Typescript, Material UI. Working on several projects for an energy company",
+        minCardSize: 0,
+    },
+    {
+        company: "Avanade / ADF (Contract 6 months with 1 month extension)",
+        role: "Senior Front End Developer",
+        location: "Melbourne, Australia / Remote",
+        startDate: moment("1-June-2020"),
+        endDate: moment("1-December-2020"),
+        description: "Front end/react engineer working on adding new functionality to an existing application for a health management system used by the Australian Defense Force Government Agency. Tech stack used was React, Node.js, Typescript, ES6. Fully remote role - developers in our team are all across Australia",
+        minCardSize: 0,
+    },
+    {
+        company: "Agoda",
+        role: "Senior Fullstack Software Engineer",
+        location: "Bangkok, Thailand",
+        startDate: moment("1-March-2020"),
+        endDate: moment("1-April-2020"),
+        description: "Worked again as a software engineer at Agoda - a tourism company. But COVID came along and disrupted my plans. This is the reason why this was short lived. I had no choice and had to leave Thailand in an emergency due to the COVID crisis unfolding and the recommendation of the Australian government to come home. I had a current rental lease still active back home in Australia (2 months left on rental) as I was not allowed to end the rental earlier but the job in Thailand needed to start earlier (unlike Thailand where you can break a rental lease) but border closures forced my hand and forced me to come home unexpectantly and the Australian government closed the international borders which prevented me from even going back.",
+        minCardSize: 0,
+    },
+    {
+        company: "National Australia Bank (6 Month Contract with 3 Month extension)",
+        role: "Senior Fullstack Software Engineer",
+        location: "Melbourne, Australia",
+        startDate: moment("1-March-2019"),
+        endDate: moment("1-December-2019"),
+        description: "Worked as a full stack developer on upgrading a legacy application to use Angular. The role was mainly front end using Webpack, Protractor, Node.JS and Angular.  A large bulk of the role was working on devops related work. I introduced a screenshot feature to our failed protractor/selenium tests to aid with analyzing failed tests which helped a lot with our flaky tests during builds. I also was on the interview panel and interviewed several senior developers for other teams earlier in the role.",
+        minCardSize: 600,
+    },
+    {
+        company: "Ascend / True Money",
+        role: "Technical Lead / Team Lead",
+        location: "Bangkok, Thailand",
+        startDate: moment("1-January-2018"),
+        endDate: moment("1-October-2018"),
+        description: "I lead and coach a team of 5 junior remote Vietnamese developers (through skype) from the Thailand headquarters. My responsibilities are broken up like this: <br /><br /><ul><li>25% of my role is responsible for defining/extracting requirements from our PO or even coordinating with other teams.</li><br /><li>25% of my role is involved in most design and architecture decisions (especially high level) and leading the team on good practices.</li><br /><li>50% of my role is hands on coding / development with the team. I still code normally every second day. Or week one of the sprint is coding and the second week is future planning the next sprint with the PO</li></ul>",
+        minCardSize: 0,
+    },
+    {
+        company: "Agoda",
+        role: "Senior Fullstack Developer",
+        location: "Bangkok, Thailand",
+        startDate: moment("1-January-2017"),
+        endDate: moment("1-January-2018"),
+        description: "Worked as a Fullstack developer on a greenfield project in regards to viewing trip experiences and things to do at the destination. Our team was one of the first teams to introduce and pilot React.js. I also worked on a few smaller projects on the main booking website.",
+        minCardSize: 0,
+    },
+    {
+        company: "Workcover Queensland (12 month Contract)",
+        role: "Senior Java Developer",
+        location: "Brisbane, Queensland",
+        startDate: moment("1-October-2015"),
+        endDate: moment("1-November-2016"),
+        description: "Worked as a Contract Senior Developer helping out move an old legacy app into the newer system. Performed various Technical Debt enhancements as part of the role. Workcover is a compulsory insurance businesses must pay for which insure employee who get an injury on the job and cannot work for a period of time",
+        minCardSize: 0,
+    },
+    {
+        company: "Intelligent Pathways (Short term Contract)",
+        role: "Senior Mule ESB Developer",
+        location: "Brisbane, Queensland",
+        startDate: moment("1-July-2015"),
+        endDate: moment("1-October-2015"),
+        description: "I worked as a Senior Developer for a Mule ESB short term project. These projects were about integration for a client in Sydney (Qantas). I worked on a system which rewards frequency flyers",
+        minCardSize: 0,
+    },
+    {
+        company: "Corelogic / RPData (5 Month Contract)",
+        role: "Senior Java Developer",
+        location: "Brisbane, Queensland",
+        startDate: moment("1-March-2015"),
+        endDate: moment("1-July-2015"),
+        description: "I worked as a Senior Java Developer for the DUA project (Data Update Project). This was an internal application. Our application was written in Google Web Toolkit. Due to there not being adequate testing tools at the time, I worked on a testing framework for Google Web Toolkit that could mock low levels calls provided by the framework that were not available during unit testing.",
+        minCardSize: 300,
+    },
+    {
+        company: "Queensland Treasury Corporation (6 Month Contract)",
+        role: "Senior Java/Mule ESB Developer",
+        location: "Brisbane, Queensland",
+        startDate: moment("1-September-2014"),
+        endDate: moment("1-March-2015"),
+        description: "I worked as a Senior Java Developer/Advisor on the STP (Straight through processing project). Using the Enterprise Service Bus, I helped design, lead and develop a solution to automate the straight through processing of front office trading applications into QTC internal bookkeeping systems. <br /><br />Given the fact that we had to work with a third party system with limited documentation in their API spec and a support centre located in Singapore, our project was a huge success. <br /><br />Our project ran ahead of time by several weeks and as a result were able to implement extra features at the same fixed cost and exceeded our client’s expectations. Our project had minimal defects due to the high and thorough use of Junit testing and even though TDD was not an official QTC testing/development approach strategy, I personally took an active approach to practising TDD at times in the project and wrote unit tests before the code was written when it was possible to do so",
+        minCardSize: 0,
+    },
+    {
+        company: "Flight Centre (7 Month Contract)",
+        role: "Senior Software Engineer",
+        location: "Brisbane, Queensland",
+        startDate: moment("1-December-2013"),
+        endDate: moment("1-July-2014"),
+        description: "I worked as a Senior Java Developer adding new enhancements to the backend booking engine. The responsive project was about adding the ability to use the flight centre booking engine through a mobile device. I worked on the backend engine adding extra features as needed and work alongside another team who worked on the front end. I was the only java developer working on the backend and as such was required as part of my duties to take a lead",
+        minCardSize: 0,
+    },
+    {
+        company: "Lighthouse HQ (Short term Contract)",
+        role: "Senior Software Engineer",
+        location: "Brisbane, Queensland",
+        startDate: moment("1-August-2013"),
+        endDate: moment("1-December-2013"),
+        description: "I work as a Senior Java Developer providing enhancements to an existing application. 10 – 20% of my time is spent mentoring other team members. I provide input and direction into the design during Code Review meetings. There is no architect on our team so naturally the role allows me to take more of a lead position.",
+        minCardSize: 0,
+    },
+    {
+        company: "Virgin Australia (Permanent)",
+        role: "Senior Java Developer",
+        location: "Brisbane, Queensland",
+        startDate: moment("1-August-2011"),
+        endDate: moment("1-August-2013"),
+        description: "Providing Java EE and SOA development and consultation services to Virgin Australia on project Unify. I provided expertise in message-based integration systems in an Oracle Service Bus SOA ecosystem, involving extensive use of Java EE, JMS, JAX-WS, XQuery and ancillary technologies such as Maven.",
+        minCardSize: 0,
+    },
+    {
+        company: "Queensland Transport and Mains Road (Permanent)",
+        role: "Senior Java Developer",
+        location: "Brisbane, Queensland",
+        startDate: moment("1-January-2006"),
+        endDate: moment("1-August-2011"),
+        description: "Worked on various projects and also enhancements as a Java Developer.",
+        minCardSize: 0,
+    }
+];
+
+export const projects: SideProject[] = [
+    {
+        name: "Various Forex Trading Automation Software",
+        description: "I built software that trades the forex market and this software runs on a VPS 24/7. It is used for investment purposes only (not income) and is fully automated without requiring intervention etc trades in the middle of the night while I sleep. Set and forget stuff!<br /><br />A large bulk of my work is research into edges with large sets of data spanning decades - Part of my work is building neural networks to train fundamental data such as GDP,CPI (Inflation),Manufacturing PMI,Services PMI,PPI,PCE,Unemployment change and also use market sentiment data such as Commitment of traders, put call ratios, retail sentiment. <br /><br />This information is fed into a neural network which I built and trained against the past performance of the USD and various forex currencies. We're finding out what happens on average!",
+    },
+    {
+        name: "This CV you are looking at",
+        description: "Did you know this CV you are looking at right now is a react-tailwind website I built and this is the generated PDF file on the site which has my whole CV?",
+        githubUrl: "https://www.github.com/ChrisGrigg38/ChrisCV",
+    },
+     {
+        name: "Pac Man VR",
+        description: "I accidentely created a horror game when i built Pacman to work on VR using Unity Game Engine:",
+        githubUrl: "https://www.github.com/ChrisGrigg38/PacManVR",
+        youtubeUrl: "https://www.youtube.com/watch?v=MuLSKdvfYE0"
+    },
+    {
+        name: "Tic Tac Toe",
+        description: "Tic Tac Toe. Made in react. Can you beat the computer player?",
+        githubUrl: "https://www.github.com/ChrisGrigg38/TicTacToe",
+        youtubeUrl: "https://tictactoechrisgrigg38.tiiny.site/"
+    },
+    {
+        name: "Brick Breaker Game",
+        description: "Classic Brick Breaker Game",
+        githubUrl: "https://www.github.com/ChrisGrigg38/BrickBreak",
+        youtubeUrl: "https://brickbreak.tiiny.site/"
+    }
+];
