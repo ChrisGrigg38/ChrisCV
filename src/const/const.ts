@@ -193,6 +193,7 @@ export const projects: SideProject[] = [
         name: "This CV you are looking at",
         description: "Did you know this CV you are looking at right now is a react-tailwind website I built and this is the generated PDF file on the site which has my whole CV?",
         githubUrl: "https://www.github.com/ChrisGrigg38/ChrisCV",
+        youtubeUrl: "https://chrisgrigg38.github.io/ChrisCV/",
     },
      {
         name: "Pac Man VR",
