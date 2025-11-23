@@ -16,20 +16,21 @@ const Header: FC<HeaderProps> = ({personalInfo}) => {
                 <img
                   src={personalInfo.photoUrl}
                   alt={personalInfo.name}
+                  data-testid="photo"
                   className="w-32 h-32 rounded-full border-4 border-white shadow-xl object-cover hidden md:flex"
                 />
                 <div className="flex flex-col gap-4">
                     <div className="flex flex-col gap-3">
-                        <h1 className="text-4xl font-bold">{personalInfo.name}</h1>
-                        <p className="text-xl text-blue-100">{personalInfo.title}</p>
+                        <h1 className="text-4xl font-bold" data-testid="name">{personalInfo.name}</h1>
+                        <p className="text-xl text-blue-100" data-testid="title">{personalInfo.title}</p>
                     </div>
                     <div className="flex gap-2 text-sm flex-wrap md:grid md:grid-cols-2">
-                        <HeaderItem isLink linkUrl={`mailto:${personalInfo.email}`} text={personalInfo.email} iconComponent={ <Mail size={16} />} />
-                        <HeaderItem text={personalInfo.phone} iconComponent={ <Phone size={16} />} />
-                        <HeaderItem text={personalInfo.address} iconComponent={ <MapPin size={16} />} />
-                        <HeaderItem isLink linkUrl={personalInfo.linkedin} text={personalInfo.linkedin} iconComponent={  <Linkedin size={16} />} />
-                        <HeaderItem isLink linkUrl={personalInfo.github} text={personalInfo.github} iconComponent={  <Github size={16} />} />
-                        <HeaderItem isLink linkUrl={personalInfo.youtube} text={personalInfo.youtube} iconComponent={  <Youtube size={16} />} />
+                        <HeaderItem dataTestId="email" isLink linkUrl={`mailto:${personalInfo.email}`} text={personalInfo.email} iconComponent={ <Mail size={16} />} />
+                        <HeaderItem dataTestId="phone" text={personalInfo.phone} iconComponent={ <Phone size={16} />} />
+                        <HeaderItem dataTestId="address" text={personalInfo.address} iconComponent={ <MapPin size={16} />} />
+                        <HeaderItem dataTestId="linkedin" isLink linkUrl={personalInfo.linkedin} text={personalInfo.linkedin} iconComponent={  <Linkedin size={16} />} />
+                        <HeaderItem dataTestId="github" isLink linkUrl={personalInfo.github} text={personalInfo.github} iconComponent={  <Github size={16} />} />
+                        <HeaderItem dataTestId="youtube" isLink linkUrl={personalInfo.youtube} text={personalInfo.youtube} iconComponent={  <Youtube size={16} />} />
                     </div>
                 </div>
             </div>

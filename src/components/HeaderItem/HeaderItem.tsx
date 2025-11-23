@@ -6,16 +6,17 @@ export interface HeaderItemProps {
     linkUrl?: string
     iconComponent: React.ReactNode
     text: string
+    dataTestId?: string
 }
 
-const HeaderItem: FC<HeaderItemProps> = ({linkUrl, iconComponent, text, isLink = false}) => {
+const HeaderItem: FC<HeaderItemProps> = ({linkUrl, iconComponent, text, dataTestId, isLink = false}) => {
     return (
-        isLink ? <a href={linkUrl} target="_blank" data-pdflink={linkUrl} className="flex items-center gap-2 hover:text-blue-200 transition-colors">
+        isLink ? <a href={linkUrl} target="_blank" className="flex items-center gap-2 hover:text-blue-200 transition-colors">
             {iconComponent}
-            <span className="break-all">{text}</span>
+            <span className="break-all" data-testid={dataTestId}>{text}</span>
         </a> : <div className="flex items-center gap-2">
             {iconComponent}
-            <span className="break-all">{text}</span>
+            <span className="break-all" data-testid={dataTestId}>{text}</span>
         </div>
     )
 }

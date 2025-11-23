@@ -1,6 +1,6 @@
 import { Experience } from "@/types/types"
-import React, { FC, useMemo } from "react"
-import moment from "moment"
+import { FC, useMemo, memo } from "react"
+import moment from 'moment';
 
 
 export interface TimeProgressBarProps {
@@ -36,4 +36,4 @@ const TimeProgressBar: FC<TimeProgressBarProps> = ({job}) => {
     )
 }
 
-export default React.memo(TimeProgressBar)
+export default memo(TimeProgressBar)
