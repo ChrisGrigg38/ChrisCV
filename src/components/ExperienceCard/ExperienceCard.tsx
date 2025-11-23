@@ -1,4 +1,4 @@
-import React, { FC, useMemo } from "react"
+import { FC, useMemo } from "react"
 import TimeProgressBar from "../TimeProgressBar/TimeProgressBar"
 import RichText from "../RichText/RichText"
 import { Experience } from "../../types/types"
