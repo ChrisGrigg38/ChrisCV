@@ -11,12 +11,12 @@ export interface HeaderItemProps {
 
 const HeaderItem: FC<HeaderItemProps> = ({linkUrl, iconComponent, text, dataTestId, isLink = false}) => {
     return (
-        isLink ? <a href={linkUrl} target="_blank" className="flex items-center gap-2 hover:text-blue-200 transition-colors">
+        isLink ? <a href={linkUrl} data-testid={dataTestId} target="_blank" className="flex items-center gap-2 hover:text-blue-200 transition-colors">
             {iconComponent}
-            <span className="break-all" data-testid={dataTestId}>{text}</span>
-        </a> : <div className="flex items-center gap-2">
+            <span className="break-all">{text}</span>
+        </a> : <div className="flex items-center gap-2" data-testid={dataTestId}>
             {iconComponent}
-            <span className="break-all" data-testid={dataTestId}>{text}</span>
+            <span className="break-all">{text}</span>
         </div>
     )
 }
