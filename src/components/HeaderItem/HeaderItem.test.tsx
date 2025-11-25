@@ -44,7 +44,7 @@ describe('render HeaderItem Component', () => {
         text: 'Phone Number'
       }
 
-      const { container } = render(<HeaderItem {...props} />)
+      render(<HeaderItem {...props} />)
 
       // Find span by text content
       const spanElement = screen.getByText('Phone Number')
@@ -221,7 +221,7 @@ describe('render HeaderItem Component', () => {
         { url: 'https://youtube.com/@user', text: 'YouTube', testId: 'youtube' }
       ]
 
-      const { container } = render(
+      render(
         <div>
           {socialLinks.map((link) => (
             <HeaderItem
