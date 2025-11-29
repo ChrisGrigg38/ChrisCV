@@ -11,7 +11,7 @@ const Summary: FC<SummaryProps> = ({personalInfo}) => {
     return (
         <div className="flex flex-col gap-4 p-8 pb-1 border-b border-gray-200">
             <HeaderTitle title="Professional Summary" />
-            <p className="text-gray-700 leading-relaxed break-words"><RichText text={personalInfo.summary} /></p>
+            <span className="text-gray-700 leading-relaxed break-words" data-testid="summary"><RichText text={personalInfo.summary} /></span>
         </div>
     )
 }
