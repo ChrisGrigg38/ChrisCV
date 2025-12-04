@@ -1,3 +1,4 @@
+import AIAssistantChat from "@/components/AIAssistantChat/AIAssistantChat";
 import Experiences from "@/components/Experiences/Experiences";
 import ExportButton from "@/components/ExportButton/ExportButton";
 import Header from "@/components/Header/Header";
@@ -34,6 +35,8 @@ const CVPage = () => {
                         </div>
                     </div>
                 </div>
+                {/* AI Assistant */}
+                <AIAssistantChat />
             </div>
         </div>
     );

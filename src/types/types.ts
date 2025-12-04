@@ -32,3 +32,8 @@ export interface Experience {
     endDate: moment.Moment | null
     minCardSize: number
 }
+
+export interface AIMessage {
+  role: 'user' | 'assistant';
+  content: string;
+}
