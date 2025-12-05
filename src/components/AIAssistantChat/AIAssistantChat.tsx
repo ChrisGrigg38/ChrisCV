@@ -1,7 +1,7 @@
 const AIAssistantChat = () => {
   
   return (
-    <iframe src="https://claude.site/public/artifacts/8a800889-2b11-4042-9084-066702bae6e9/embed" title="Claude Artifact" width="100%" height="600" frameBorder="0" allow="clipboard-write" allowFullScreen></iframe>
+    <iframe src="https://claude.site/public/artifacts/032c7616-ef92-4cca-a54c-e8b0683fab3a/embed" title="Claude Artifact" width="100%" height="200" frameBorder="0" allow="clipboard-write" allowFullScreen></iframe>
   );
 }
 
