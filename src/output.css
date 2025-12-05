@@ -600,6 +600,14 @@ video {
   position: relative;
 }
 
+.bottom-\[40px\] {
+  bottom: 40px;
+}
+
+.right-\[40px\] {
+  right: 40px;
+}
+
 .top-1\/2 {
   top: 50%;
 }
@@ -1056,8 +1064,23 @@ video {
   transition-duration: 150ms;
 }
 
+.duration-300 {
+  transition-duration: 300ms;
+}
+
 .last\:pb-0:last-child {
   padding-bottom: 0px;
+}
+
+.hover\:scale-110:hover {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:bg-blue-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:from-blue-700:hover {
