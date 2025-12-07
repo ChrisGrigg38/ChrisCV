@@ -101,6 +101,10 @@ The application will be available at `http://localhost:3000`
 One of the unique features of this portfolio is the integration with Claude AI through Anthropic's Artifacts system. This allows visitors to ask natural language questions about my CV and get intelligent responses.
 
 **Why Claude Artifacts?**
+
+I used Claude Artifacts over integrating a chatbox widget directly into our CV website
+mainly because artifacts allowed us to use Claude AI without having to pay for tokens. We could use the api directly, but we have to purchase tokens to use the api. Claude Artifacts showed us that we could integrate Claude into our site using the free modal. Claude Artifacts also:
+
 - Provides an interactive way for recruiters/visitors to explore my experience
 - Demonstrates integration with modern AI APIs
 - Showcases ability to work with cutting-edge technologies
