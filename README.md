@@ -103,7 +103,7 @@ One of the unique features of this portfolio is the integration with Claude AI t
 **Why Claude Artifacts?**
 
 I used Claude Artifacts over integrating a chatbox widget directly into our CV website
-mainly because artifacts allowed us to use Claude AI without having to pay for tokens. We could use the api directly, but we have to purchase tokens to use the api. Claude Artifacts showed us that we could integrate Claude into our site using the free modal. There is also a few issues with CORS and also protecting the api key form the public. Essentially we would need some sort of a backend service that would actually call the claude api that our CV website would talk to to hide the api key and rate limit protect the api key from abuse. Claude Artifacts also:
+mainly because artifacts allowed us to use Claude AI without having to pay for tokens. We could use the api directly, but we have to purchase tokens to use the api. Claude Artifacts showed us that we could integrate Claude into our site using the free modal. There is also a few issues with CORS and also protecting the api key from the public. Essentially we would need some sort of a backend service that would actually call the claude api that our CV website would talk to to hide the api key and rate limit protect the api key from abuse. Claude Artifacts also:
 
 - Provides an interactive way for recruiters/visitors to explore my experience
 - Demonstrates integration with modern AI APIs
