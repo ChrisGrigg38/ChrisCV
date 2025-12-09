@@ -12,7 +12,7 @@ const SkillBar: FC<SkillsBarProps> = ({skills}) => {
             {skills.map((skill, index) => (
                 <div key={index} className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                     <div className="flex justify-between items-center mb-2">
-                        <span className="font-medium text-gray-800" data-testid={`skillname-${skill.name}`}>{skill.name}</span>
+                        <span className="font-medium text-gray-800" data-testid={`skillname-${skill.name}`} data-ats data-ats-nowrap>{skill.name}</span>
                     </div>
                     <SkillDots level={skill.level} dataTestId={`skilllevel-${skill.name}`} />
                 </div>

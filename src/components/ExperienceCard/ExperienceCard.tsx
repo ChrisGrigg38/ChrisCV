@@ -26,14 +26,14 @@ const ExperienceCard: FC<ExperienceCardProps> = ({job}) => {
             <div className="flex flex-col gap-2 bg-gradient-to-br from-white to-gray-50 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow" style={calculatedHeightStyle}>
                 <div className="flex flex-col gap-1">
                     <div className="flex flex-col lg:flex-row justify-between gap-1">
-                        <h3 className="text-xl font-bold text-gray-800" data-testid={`role-${testIdDateFormat}`}>{job.role}</h3>
-                        <p className="text-sm font-medium text-gray-700" data-testid={`dates-${testIdDateFormat}`}>
+                        <h3 className="text-xl font-bold text-gray-800" data-testid={`role-${testIdDateFormat}`} data-ats data-ats-nowrap>{job.role}</h3>
+                        <p className="text-sm font-medium text-gray-700" data-testid={`dates-${testIdDateFormat}`} data-ats data-ats-nowrap>
                             {formatDate(job.startDate)} - {formatDate(job.endDate)}
                         </p>
                     </div>
                     <div className="flex flex-col gap-3">
-                        <p className="text-blue-600 font-semibold" data-testid={`company-${testIdDateFormat}`}>{job.company}</p>
-                        <p className="text-gray-600 text-sm" data-testid={`location-${testIdDateFormat}`}>{job.location}</p>
+                        <p className="text-blue-600 font-semibold" data-testid={`company-${testIdDateFormat}`} data-ats>{job.company}</p>
+                        <p className="text-gray-600 text-sm" data-testid={`location-${testIdDateFormat}`} data-ats>{job.location}</p>
                     </div>
                 </div>
                 <TimeProgressBar job={job} />          

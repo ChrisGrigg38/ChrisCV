@@ -14,7 +14,7 @@ const RichText: FC<RichTextProps> = ({text}) => {
     }, [text])
 
     return (
-        <>{cleanedText}</>
+        <div data-ats>{cleanedText}</div>
     )
 }
 

@@ -13,10 +13,10 @@ const HeaderItem: FC<HeaderItemProps> = ({linkUrl, iconComponent, text, dataTest
     return (
         isLink ? <a href={linkUrl} data-testid={dataTestId} target="_blank" className="flex items-center gap-2 hover:text-blue-200 transition-colors">
             {iconComponent}
-            <span className="break-all">{text}</span>
+            <span className="break-all" data-ats data-ats-background="rgb(29,79,216)">{text}</span>
         </a> : <div className="flex items-center gap-2" data-testid={dataTestId}>
             {iconComponent}
-            <span className="break-all">{text}</span>
+            <span className="break-all" data-ats data-ats-background="rgb(29,79,216)">{text}</span>
         </div>
     )
 }

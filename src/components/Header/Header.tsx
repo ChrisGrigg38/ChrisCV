@@ -21,8 +21,8 @@ const Header: FC<HeaderProps> = ({personalInfo}) => {
                 />
                 <div className="flex flex-col gap-4">
                     <div className="flex flex-col gap-3">
-                        <h1 className="text-4xl font-bold" data-testid="name">{personalInfo.name}</h1>
-                        <p className="text-xl text-blue-100" data-testid="title">{personalInfo.title}</p>
+                        <h1 className="text-4xl font-bold" data-testid="name" data-ats data-ats-background="rgb(29,79,216)">{personalInfo.name}</h1>
+                        <p className="text-xl text-blue-100" data-testid="title" data-ats data-ats-background="rgb(29,79,216)">{personalInfo.title}</p>
                     </div>
                     <div className="flex gap-2 text-sm flex-wrap md:grid md:grid-cols-2">
                         <HeaderItem dataTestId="email" isLink linkUrl={`mailto:${personalInfo.email}`} text={personalInfo.email} iconComponent={ <Mail size={16} />} />
