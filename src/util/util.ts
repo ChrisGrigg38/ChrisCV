@@ -56,7 +56,7 @@ const addTextOverlays = (pdf: any, originalTexts: ATSElements[], containerElemen
     const scaleY = pdfHeight / containerElement.offsetHeight;
 
     // 4. Add text overlays to PDF
-    originalTexts.forEach(({ element: el, text, innerHTML }) => {
+    originalTexts.forEach(({ element: el, innerHTML }) => {
         const rect = el.getBoundingClientRect();
         
         const x = (rect.left - containerRect.left) * scaleX;
