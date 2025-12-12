@@ -2,6 +2,7 @@ import { PersonalInfo } from "@/types/types";
 import { exportPDF } from "@/util/util";
 import { Download } from "lucide-react"
 import { FC, useState } from "react";
+import CVSaving from "../CVSaving/CVSaving";
 
 export interface ExportButtonProps {
     personalInfo: PersonalInfo
@@ -30,6 +31,9 @@ const ExportButton: FC<ExportButtonProps> = ({personalInfo}) => {
               <Download size={20} />
               {isExporting ? 'Generating PDF...' : 'Export to PDF'}
             </button>
+            
+            {/* CV Saving Widget */}
+            <CVSaving isVisible={isExporting} />
         </div>
     )
 }
