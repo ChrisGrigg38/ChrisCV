@@ -1,10 +1,21 @@
 import { ATSElements, PersonalInfo } from "@/types/types";
+import { formatHTMLToPdfTexts } from "./pdfformat";
 
+/**
+ * Format the date on the CV
+ * @param date 
+ * @returns 
+ */
 export const formatDate = (date: moment.Moment | null): string => {
     if (!date) return "Present";
     return date.format("MMM YYYY")
 };
 
+/**
+ * Hide all ATS specific elements and keep track of the elements
+ * @param containerElement 
+ * @returns 
+ */
 const hideATSElements = async (containerElement: HTMLElement) => {
     // Find all elements that are for ATS to read.
     const atsTextElements = containerElement.querySelectorAll('[data-ats]');
@@ -26,6 +37,17 @@ const hideATSElements = async (containerElement: HTMLElement) => {
     return originalTexts
 }
 
+/**
+ * Adds text overlays to the generated PDF.
+ * @param pdf
+ * @param originalTexts
+ * @param containerElement
+ * @param currentPageStart
+ * @param currentPageHeight
+ * @param pdfWidth
+ * @param pdfHeight
+ * @returns 
+ */
 const addTextOverlays = (pdf: any, originalTexts: ATSElements[], containerElement: HTMLElement, currentPageStart: number, currentPageHeight: number, pdfWidth: number, pdfHeight: number) => {
 
     const containerRect = containerElement.getBoundingClientRect();
@@ -34,7 +56,7 @@ const addTextOverlays = (pdf: any, originalTexts: ATSElements[], containerElemen
     const scaleY = pdfHeight / containerElement.offsetHeight;
 
     // 4. Add text overlays to PDF
-    originalTexts.forEach(({ element: el, text }) => {
+    originalTexts.forEach(({ element: el, text, innerHTML }) => {
         const rect = el.getBoundingClientRect();
         
         const x = (rect.left - containerRect.left) * scaleX;
@@ -59,7 +81,7 @@ const addTextOverlays = (pdf: any, originalTexts: ATSElements[], containerElemen
         
         // Convert to PDF units
         const pdfFontSize = fontSize * 0.5
-        const pdfLineHeight = fontSize * 0.352778;
+        const pdfLineHeight = fontSize * 0.25;
     
         // Set font properties
         pdf.setFontSize(pdfFontSize);
@@ -84,10 +106,13 @@ const addTextOverlays = (pdf: any, originalTexts: ATSElements[], containerElemen
         }
 
         //vertical alignment
-        let alignY = realY + (pdfLineHeight / 2);
+        let alignY = realY + (pdfLineHeight / 1.5);
+
+        //format text
+        const formattedText = formatHTMLToPdfTexts(innerHTML)
     
         // Split text to fit width and handle multi-line
-        const lines = noWrap ? [text] : pdf.splitTextToSize(text.trim(), width) as string[]; // -2mm for padding
+        const lines = noWrap ? formattedText : formattedText.flatMap(element => pdf.splitTextToSize(element, width)) as string[];
     
         const isLink = el.tagName === 'a'
 
@@ -107,6 +132,10 @@ const addTextOverlays = (pdf: any, originalTexts: ATSElements[], containerElemen
   });
 }
 
+/**
+ * Restore the ATS text overlays on the website
+ * @param originalTexts 
+ */
 const restoreAtsOverlays = (originalTexts: ATSElements[]) => {
 
     // 5. Restore original text to the webpage
@@ -117,6 +146,11 @@ const restoreAtsOverlays = (originalTexts: ATSElements[]) => {
 
 }
 
+/**
+ * Export the website to a PDF file which can be distributed.
+ * @param personalInfo 
+ * @returns 
+ */
 export const exportPDF = async (personalInfo: PersonalInfo) => {
     try {
         const element = document.getElementById('cv-content');
