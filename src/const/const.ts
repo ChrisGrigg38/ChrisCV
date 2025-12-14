@@ -9,7 +9,7 @@ export const personalInfo: PersonalInfo = {
     address: "Melbourne, Australia",
     linkedin: "https://www.linkedin.com/in/chris-grigg-b14b3917/",
     github: "https://www.github.com/ChrisGrigg38",
-    youtube: "https://www.youtube.com/@christechlead/videos",
+    youtube: "https://www.youtube.com/@ChrisTheTechLead/videos",
     photoUrl: "/ChrisCV/me.png",
     summary: "A self-motivated and hard working Senior / Lead Developer (21 years total experience) with a wide range of IT experience who is passionate about delivering high quality applications. I started coding at the age of 12 as a hobby and loved it so much that it became my career. <br /><br />I've moved from Backend to Full stack to more recently Front end development. Commercially wise, I'm experienced in react.js, node.js, java, .NET, however personally wise I also have python, c++, c. <br /><br />I also have personal projects (everything from neural networks to unity games) that I maintain regularly on Github at: <br /><br />https://github.com/ChrisGrigg38/<br />https://www.youtube.com/@christechlead/videos<br /><br />If you'd like to see my portfolio.\nPlease see bottom of CV for the personal projects section as well as recent employer performance recognition.\n\nIn fact, this CV itself was created from a react tailwind webapp exported to a PDF that I built myself which is part of my personal projects which also includes the abiltiy to ask Claude AI any questions you like about my experience.<br /><br />"
 };
@@ -199,7 +199,7 @@ export const projects: SideProject[] = [
         name: "Pac Man VR",
         description: "I accidentely created a horror game when i built Pacman to work on VR using Unity Game Engine:",
         githubUrl: "https://www.github.com/ChrisGrigg38/PacManVR",
-        youtubeUrl: "https://www.youtube.com/watch?v=MuLSKdvfYE0"
+        youtubeUrl: "https://www.youtube.com/watch?v=0VVaszx5ab8"
     },
     {
         name: "Tic Tac Toe",
