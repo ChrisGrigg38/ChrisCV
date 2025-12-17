@@ -110,9 +110,13 @@ mainly because artifacts allowed us to use Claude AI without having to pay for t
 - Showcases ability to work with cutting-edge technologies
 - Creates a memorable, differentiated portfolio experience
 
-### Planned Future Changes
+### ATS support
 
-- Add the ability to encode into the exported PDF file the experience and tech stack so that ATS software can read the PDF.
+One of the biggest design decisions on this project was to solve it so my PDF could be read by a CV ATS system. We used to render a canvas image to the PDF and this means that ATS can't read the text off the image. I had a few ideas on how to solve this but I consulted Claude AI and discussed with Claude AI some design paths to resolve this issue. I've decided to make whole Claude AI conversation public:
+
+https://claude.ai/share/23c0d5e7-09fb-4598-8b8c-7e4826aac9ed
+
+We came up with several design solutions and the third option was chosen.
 
 
 ### Build & Deployment
