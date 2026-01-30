@@ -29,8 +29,8 @@ describe('formatDate', () => {
 });
 
 describe('exportPDF', () => {
-  let mockPdf: any;
-  let mockCanvas: any;
+  let mockPdf: {internal: {pageSize: {getWidth: jest.Func, getHeight: jest.Func}}, addImage: jest.Func, addPage: jest.Func, setFontSize: jest.Func, setFont: jest.Func, setTextColor: jest.Func, text: jest.Func, link: jest.Func, save: jest.Func, splitTextToSize: jest.Func}
+  let mockCanvas: {width: number, height: number, toDataURL: jest.Func};
   let mockElement: HTMLElement;
   let mockJsPDF: jest.Mock;
   let mockHtml2canvas: jest.Mock;
@@ -74,7 +74,9 @@ describe('exportPDF', () => {
     mockHtml2canvas = jest.fn().mockResolvedValue(mockCanvas);
 
     // Mock window globals
+    // eslint-disable-next-line
     (window as any).jspdf = { jsPDF: mockJsPDF };
+    // eslint-disable-next-line
     (window as any).html2canvas = mockHtml2canvas;
 
     // Mock DOM element
@@ -98,7 +100,9 @@ describe('exportPDF', () => {
     jest.clearAllMocks();
     jest.useRealTimers();
     document.body.innerHTML = '';
+    // eslint-disable-next-line
     delete (window as any).jspdf;
+    // eslint-disable-next-line
     delete (window as any).html2canvas;
   });
 

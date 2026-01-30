@@ -1,6 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import AIAssistantChat from './AIAssistantChat';
+import '@testing-library/jest-dom';
+import { describe, test } from '@jest/globals';
 
 describe('AIAssistantChat', () => {
   test('renders the chat button', () => {

@@ -3,6 +3,7 @@ import '@testing-library/jest-dom';
 import moment from 'moment';
 import ExperienceCard from './ExperienceCard';
 import { Experience } from '../../types/types';
+import { describe, test } from '@jest/globals';
 
 describe('renders the ExperienceCard', () => {
   const mockExperience: Experience = {

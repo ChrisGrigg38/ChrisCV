@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import HeaderTitle, { HeaderTitleProps } from './HeaderTitle'
+import { describe, test } from '@jest/globals';
 
 describe('render HeaderTitle Component', () => {
   test('should render title with data-testid', () => {

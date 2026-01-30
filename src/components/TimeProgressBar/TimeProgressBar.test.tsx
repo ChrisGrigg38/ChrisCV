@@ -2,10 +2,11 @@ import { render } from '@testing-library/react';
 import TimeProgressBar from './TimeProgressBar';
 import { Experience } from '@/types/types';
 import moment from 'moment';
+import { describe, test } from '@jest/globals';
 
 describe('TimeProgressBar', () => {
 
-  let spy: jest.SpyInstance<number, [], any>
+  let spy: jest.SpyInstance<number, []>
 
   const createMockJob = (
     startDate: moment.Moment,

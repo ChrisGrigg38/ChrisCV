@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import Projects, { ProjectsProps } from './Projects'
 import { SideProject } from '../../types/types'
+import { describe, test } from '@jest/globals';
 
 describe('Projects Component', () => {
   

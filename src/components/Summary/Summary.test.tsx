@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import Summary from './Summary'
 import { PersonalInfo } from '../../types/types'
+import { describe, test } from '@jest/globals';
 
 // Helper function to create mock PersonalInfo with default values
 const createMockPersonalInfo = (overrides?: Partial<PersonalInfo>): PersonalInfo => ({

@@ -118,7 +118,7 @@ export const formatHTMLToPdfTexts = (html: string): string[] => {
   const doc = parser.parseFromString(html, 'text/html');
   
   const lines: string[] = [];
-  let listCounters: { [key: number]: number } = {};
+  const listCounters: { [key: number]: number } = {};
   
   // Process the body content
   processNode(doc.body, 0, lines, listCounters);

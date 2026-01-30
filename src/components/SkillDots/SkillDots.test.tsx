@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import SkillDots from './SkillDots'
+import { describe } from '@jest/globals';
 
 describe('render SkillDots Component', () => {
     describe('Basic Rendering', () => {

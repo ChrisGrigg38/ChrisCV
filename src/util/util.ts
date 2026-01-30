@@ -48,6 +48,8 @@ const hideATSElements = async (containerElement: HTMLElement) => {
  * @param pdfHeight
  * @returns 
  */
+// TODO: We need a type definition for jsPDF, for now we'll just have to skip to stop eslint from complaining
+// eslint-disable-next-line
 const addTextOverlays = (pdf: any, originalTexts: ATSElements[], containerElement: HTMLElement, currentPageStart: number, currentPageHeight: number, pdfWidth: number, pdfHeight: number) => {
 
     const containerRect = containerElement.getBoundingClientRect();
@@ -106,7 +108,7 @@ const addTextOverlays = (pdf: any, originalTexts: ATSElements[], containerElemen
         }
 
         //vertical alignment
-        let alignY = realY + (pdfLineHeight / 1.5);
+        const alignY = realY + (pdfLineHeight / 1.5);
 
         //format text
         const formattedText = formatHTMLToPdfTexts(innerHTML)
@@ -152,7 +154,6 @@ const restoreAtsOverlays = (originalTexts: ATSElements[]) => {
  * @returns 
  */
 export const exportPDF = async (personalInfo: PersonalInfo) => {
-    try {
         const element = document.getElementById('cv-content');
         if (!element) return;
 
@@ -165,6 +166,8 @@ export const exportPDF = async (personalInfo: PersonalInfo) => {
         const atsElements = await hideATSElements(element)
 
         // Init jsPDF
+        //TODO: add jsPDF type definition
+        // eslint-disable-next-line
         const jsPDF = (window as any).jspdf.jsPDF;
         const pdf = new jsPDF({
             orientation: 'portrait',
@@ -175,6 +178,8 @@ export const exportPDF = async (personalInfo: PersonalInfo) => {
         const pdfHeight = pdf.internal.pageSize.getHeight();
         
         // Use html2canvas and jspdf from CDN
+        //TODO: add jsPDF type definition
+        // eslint-disable-next-line
         const html2canvas = (window as any).html2canvas;
         
         const canvas = await html2canvas(element, {
@@ -220,7 +225,4 @@ export const exportPDF = async (personalInfo: PersonalInfo) => {
         restoreAtsOverlays(atsElements)
 
         pdf.save(`${personalInfo.name.replace(' ', '_')}_CV.pdf`);
-    } catch (error) {
-        throw error
-    }
 }

@@ -2,6 +2,7 @@ import { render, screen, within } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import SkillBar from './SkillBar';
 import { Skill } from '../../types/types';
+import { describe, test } from '@jest/globals';
 
 describe('render SkillBar Component', () => {
 

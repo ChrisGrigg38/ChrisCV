@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import SkillSideBar from './SkillSideBar'
 import { Skill } from '../../types/types'
+import { describe, test } from '@jest/globals';
 
 describe('SkillSideBar Component', () => {
     describe('Basic Rendering', () => {

@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Header from './Header';
 import { PersonalInfo } from '../../types/types';
+import { describe, test } from '@jest/globals';
 
 describe('renders Header Component', () => {
 
