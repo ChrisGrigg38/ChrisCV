@@ -5,7 +5,7 @@ export const personalInfo: PersonalInfo = {
     name: "Chris Grigg",
     title: "Senior/Lead Full Stack Software Engineer",
     email: "crgrigg22@hotmail.com",
-    phone: "(Intentionally left blank in public repo)",
+    phone: "(Left blank intentionally on public site)",
     address: "Melbourne, Australia",
     linkedin: "https://www.linkedin.com/in/chris-grigg-b14b3917/",
     github: "https://www.github.com/ChrisGrigg38",

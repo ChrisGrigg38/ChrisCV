@@ -10,14 +10,16 @@ export interface TimeProgressBarProps {
 const TimeProgressBar: FC<TimeProgressBarProps> = ({job}) => {
 
     const calculateProgress = (startDate: moment.Moment, endDate: moment.Moment | null): number => {
-        const start = startDate.milliseconds();
-        const end = !endDate ? moment().milliseconds() : endDate.milliseconds();
-        const total = moment().milliseconds() - job.startDate.milliseconds();
+        const start = startDate.valueOf();
+        const end = !endDate ? moment().valueOf() : endDate.valueOf();
+        const total = moment().valueOf() - job.startDate.valueOf();
+
+        if(total === 0) return 0;
         return ((end - start) / total) * 100;
     };
 
     const progress = useMemo(() => {
-        return Math.min(calculateProgress(job.startDate, job.endDate), 100)
+        return Math.round(Math.min(calculateProgress(job.startDate, job.endDate), 100))
     }, [job])
 
     return (
