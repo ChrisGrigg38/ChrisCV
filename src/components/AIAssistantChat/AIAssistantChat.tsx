@@ -17,8 +17,8 @@ const AIAssistantChat = () => {
         </button>
     
         {isOpen && (
-          <iframe 
-            src="https://claude.site/public/artifacts/18a98671-03e1-4e54-826a-1d01ef94dfa9/embed" 
+          <iframe
+            src="https://claude.site/public/artifacts/442e1fb4-a54b-4ec3-85cf-2cbc12b4bc51/embed" 
             title="Claude Artifact" 
             frameBorder="0" 
             allow="clipboard-write" 
