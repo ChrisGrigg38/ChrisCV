@@ -22,7 +22,7 @@ const ExportButton: FC<ExportButtonProps> = ({personalInfo}) => {
 
 
     return (
-        <div className="mb-6 flex justify-end">
+        <div className="mb-6 flex justify-end hidden md:block">
             <button
               onClick={handleExportPDF}
               disabled={isExporting}
