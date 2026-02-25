@@ -5,7 +5,7 @@ export const personalInfo: PersonalInfo = {
     name: "Chris Grigg",
     title: "Senior/Lead Full Stack Software Engineer",
     email: "crgrigg22@hotmail.com",
-    phone: "(Left blank intentionally on public site)",
+    phone: "(not provided on public website)",
     address: "Melbourne, Australia",
     linkedin: "https://www.linkedin.com/in/chris-grigg-b14b3917/",
     github: "https://www.github.com/ChrisGrigg38",
@@ -194,6 +194,12 @@ export const projects: SideProject[] = [
         description: "Did you know this CV you are looking at right now is a react-tailwind website I built and this is the generated PDF file on the site which has my whole CV?",
         githubUrl: "https://www.github.com/ChrisGrigg38/ChrisCV",
         youtubeUrl: "https://chrisgrigg38.github.io/ChrisCV/",
+    },
+    {
+        name: "I made all the AI's compete with each other in tetris",
+        description: "I made a little fun side project using AI and showcasing my AI skills. The tetris game was mostly written by Claude AI, however it didn't come without design and architectural decisions in how it would be built. <br /><br />You can see how I work with AI in my workflow by visiting the youtube link below.<br /><br />",
+        githubUrl: "https://github.com/ChrisGrigg38/BattleTetrisAI",
+        youtubeUrl: "https://www.youtube.com/watch?v=uisvHKZyEVs",
     },
      {
         name: "Pac Man VR",
